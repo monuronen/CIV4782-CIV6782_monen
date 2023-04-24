@@ -17,3 +17,8 @@ It expresses V as the average of the (maximal) magnitude of failure during failu
 and 2) V as the average percentage violation.
 
 => Matlab file "indicators.mat" contains the results: all the failure indicators for the different uses.
+
+Update by Mustafa Onen on 24-04-2023
+water_balance_sop.m and water_balance_keep.m has been updated with the following change.
+
+head(t) is now gets updated after the update of water availability (wa) in the for block where reservoir water level is compared with the inlet elevation of each abstraction to decide abstraction or not.

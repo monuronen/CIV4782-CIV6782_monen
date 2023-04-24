@@ -43,6 +43,7 @@ for t =1:T
             % what's left
             w(t,i) = min(wa, flows.local_demand(t,i)); 
             wa = wa - w(t,i);  % UPDATE water availability
+            head(t) = reservoir.empty_head + (wa+reservoir.min_storage).^0.5 * sqrt(2*(reservoir.max_head-reservoir.empty_head)/reservoir.max_surface);
         end % if below intake, we already have w(t) = 0
     end
     
